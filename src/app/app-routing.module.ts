@@ -6,7 +6,7 @@ import { CountriesComponent } from './countries/countries.component';
 import { CountryComponent } from './country/country.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/world', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'world', component: WorldComponent },
   { path: 'countries', component: CountriesComponent },
   { path: 'country/:id', component: CountryComponent }
