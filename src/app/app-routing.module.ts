@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'world', component: WorldComponent },
   { path: 'countries', component: CountriesComponent },
-  { path: 'country/:id', component: CountryComponent }
+  { path: 'country/:name', component: CountryComponent }
 ]
 
 
