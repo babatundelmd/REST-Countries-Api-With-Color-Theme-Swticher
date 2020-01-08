@@ -21,7 +21,7 @@
 
 
   <div class="countries-container">
-    <div class="country" *ngFor="let country of AllCountries ">
+    <div class="country" *ngFor="let country of AllCountries " title="{{country.name}}">
       <img src="{{country.flag}}" alt="{{country.name}}" width="220px" height="145px">
       <div class="country-details">
         <h3>{{country.name}}</h3>
