@@ -2,8 +2,10 @@
   <div class="search-container">
     <div class="search-input">
       <div class="search-group">
-        <i class="fa fa-search"></i><input type="text" placeholder="Search for a country...">
+        <i class="fa fa-search"></i><input type="text" placeholder="Search for a country..." (keyup)="onKey($event)">
       </div>
+      <p>{{getCountry}}</p>
+
     </div>
     <div class="search-filter">
       <div class="search-filter-item">
@@ -21,17 +23,18 @@
 
 
   <div class="countries-container">
-    <div class="country" *ngFor="let country of AllCountries " title="{{country.name}}">
-      <img src="{{country.flag}}" alt="{{country.name}}" width="240px" height="145px">
-      <div class="country-details">
-        <h3>{{country.name}}</h3>
-        <ul>
-          <li><b>Population:</b> {{country.population | number}}</li>
-          <li><b>Region:</b> {{country.region}}</li>
-          <li><b>Capital:</b> {{country.capital}}</li>
-        </ul>
-      </div>
-
+    <div class="country" *ngFor="let country of AllCountries " title="{{country.name}}" [hidden]="hide">
+      <a routerLink="country/{{country.name}}" routerLinkActive="active">
+        <img src="{{country.flag}}" alt="{{country.name}}" width="240px" height="145px">
+        <div class="country-details">
+          <h3>{{country.name}}</h3>
+          <ul>
+            <li><b>Population:</b> {{country.population | number}}</li>
+            <li><b>Region:</b> {{country.region}}</li>
+            <li><b>Capital:</b> {{country.capital}}</li>
+          </ul>
+        </div>
+      </a>
     </div>
   </div>
 

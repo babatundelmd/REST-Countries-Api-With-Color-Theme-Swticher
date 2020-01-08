@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class CountriesService {
   private Countries = 'https://restcountries.eu/rest/v2/all';
-  private Country = 'https://restcountries.eu/rest/v2/name/';
+  private Country = 'https://restcountries.eu/rest/v2/name';
 
 
   constructor (private http: HttpClient) { }
@@ -28,8 +28,8 @@ export class CountriesService {
     )
   }
 
-  getCountry (name: string): Observable<CountryModel> {
-    return this.http.get<CountryModel>(`${this.Country}/${name}`).pipe(
+  getCountry (name: string): Observable<CountryModel[]> {
+    return this.http.get<CountryModel[]>(`${this.Country}/${name}`).pipe(
       map((response) => {
         if (response) {
           return response

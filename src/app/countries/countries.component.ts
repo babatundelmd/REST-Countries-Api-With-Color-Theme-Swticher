@@ -8,6 +8,9 @@ import { CountryModel } from '../models/countries.models';
   styleUrls: [ './countries.component.css' ]
 })
 export class CountriesComponent implements OnInit {
+  values: CountryModel[] = [];
+  getCountry = '';
+  hide: boolean = false;
   public AllCountries: CountryModel[] = [];
 
   constructor (private countries: CountriesService) { }
@@ -20,8 +23,6 @@ export class CountriesComponent implements OnInit {
   getCountries () {
     this.countries.getCountries().subscribe(result => {
       this.AllCountries = result
-
-      console.log(this.AllCountries)
     },
       error => {
         console.error({ error })
@@ -29,4 +30,14 @@ export class CountriesComponent implements OnInit {
     )
   }
 
+
+  onKey (event: any) {
+    this.hide = !this.hide;
+    this.countries.getCountry(event.target.value)
+      .subscribe(res => {
+        this.values = res;
+        this.getCountry = this.values[ 0 ].name
+        console.log(this.values[ 0 ].name)
+      })
+  }
 }
