@@ -5,4 +5,6 @@ body{
     margin: 0;
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
+    background: hsl(0, 0%, 98%);
+    font-size: 1rem;
 }
