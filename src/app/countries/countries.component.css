@@ -58,9 +58,9 @@
 
 .countries-container{
     display: grid;
-    grid-template-columns: repeat(4, 220px);
+    grid-template-columns: repeat(4, 240px);
     margin-top: 50px;
-    grid-column-gap: 10%;
+    grid-column-gap: 7%;
 }
 
 
