@@ -1,11 +1,39 @@
-<div class="search-container">
-  <div class="search-input">
-    <div class="search-group">
-      <i class="fa fa-search"></i><input type="text" placeholder="Search for a country...">
+<div class="countries-wrapper">
+  <div class="search-container">
+    <div class="search-input">
+      <div class="search-group">
+        <i class="fa fa-search"></i><input type="text" placeholder="Search for a country...">
+      </div>
+    </div>
+    <div class="search-filter">
+      <div class="search-filter-item">
+        <input list="search-group" placeholder="Filter by Region">
+        <datalist id="search-group">
+          <option value="Africa">
+          <option value="America">
+          <option value="Asia">
+          <option value="Europe">
+          <option value="Ocean">
+        </datalist>
+      </div>
     </div>
   </div>
 
-  <div class="search-filter">
-    djdjd
+
+  <div class="countries-container">
+    <div class="country" *ngFor="let country of AllCountries ">
+      <img src="{{country.flag}}" alt="{{country.name}}" width="220px" height="145px">
+      <div class="country-details">
+        <h3>{{country.name}}</h3>
+        <ul>
+          <li><b>Population:</b> {{country.population}}</li>
+          <li><b>Region:</b> {{country.region}}</li>
+          <li><b>Capital:</b> {{country.capital}}</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
+
+
 </div>

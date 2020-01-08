@@ -1,3 +1,7 @@
+.countries-wrapper{
+
+}
+
 .search-container{
     display: grid;
     grid-template-columns: auto auto;
@@ -18,7 +22,6 @@
     padding: 5px 38px;
     width: 60%;
     align-items: center;
-
 }
 
 .search-group input{
@@ -28,7 +31,6 @@
     height: 20px;
     padding: 12px;
     outline: none;
-
 }
 
 .search-group i{
@@ -38,4 +40,55 @@
 .search-filter{
     justify-self: end;
     align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 12px;
+}
+.search-filter-item{
+    padding: 5px;
+}
+
+.search-filter-item input{
+    height: 20px;
+    padding: 16px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(231, 231, 231, 0.19), 0 6px 6px rgba(230, 230, 230, 0.23);
+
+}
+
+.countries-container{
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    margin-top: 50px;
+    grid-column-gap: 10%;
+}
+
+
+.countries-container{
+    padding:0 16px;
+}
+
+.country{
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 100px;
+
+    box-shadow: 0 10px 20px rgba(231, 231, 231, 0.19), 0 6px 6px rgba(230, 230, 230, 0.23);
+
+
+}
+.country ul{
+    padding: 0;
+    margin: 0;
+}
+
+.country ul li{
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.country .country-details{
+    padding: 10px 28px;
+    margin-bottom: 40px;
 }
