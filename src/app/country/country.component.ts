@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { CountriesService } from '../service/countries.service';
 import { CountryModel } from '../models/countries.models';
 import { Route } from '@angular/compiler/src/core';
@@ -13,7 +14,7 @@ import { error } from 'protractor';
 export class CountryComponent implements OnInit {
   singleCountry: CountryModel[] = [];
   isCountry: boolean = false;
-  constructor (private country: CountriesService, private route: ActivatedRoute) { }
+  constructor (private country: CountriesService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit () {
     this.getCountry();
@@ -32,6 +33,10 @@ export class CountryComponent implements OnInit {
 
     )
 
+  }
+
+  goBack (): void {
+    this.location.back();
   }
 
 }
