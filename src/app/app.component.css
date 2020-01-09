@@ -15,3 +15,12 @@ header{
 .header-item-mode{
     justify-self: end;
 }
+
+.header-item-mode h5{
+    cursor: pointer;
+}
+
+.dark-theme{
+    background-color: hsl(209, 23%, 22%);
+    color: #ffffff;
+}

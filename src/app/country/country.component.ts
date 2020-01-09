@@ -24,7 +24,7 @@ export class CountryComponent implements OnInit {
     this.country.getCountry(name).subscribe(response => {
       this.singleCountry = response
       this.isCountry = !this.isCountry;
-      console.log(this.singleCountry[ 0 ].name)
+      console.log(this.singleCountry)
     },
       error => {
         console.error({ error })

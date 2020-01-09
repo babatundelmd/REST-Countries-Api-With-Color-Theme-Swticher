@@ -1,0 +1,25 @@
+.country-wrapper{
+    padding: 50px 150px;
+}
+
+.btn-back button{
+    padding: 12px 32px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(231, 231, 231, 0.19), 0 6px 6px rgba(230, 230, 230, 0.23);
+
+}
+
+.btn-back button i{
+    margin-right: 10px;
+}
+
+.country-container{
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-gap: 10%;
+    margin-top: 70px;
+}
