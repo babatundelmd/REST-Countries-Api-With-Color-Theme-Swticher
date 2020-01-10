@@ -6,14 +6,30 @@
 
   <div class="country-container" *ngFor="let country of singleCountry">
     <div class="country-flag">
-      <img src="{{country.flag}}" alt="{{country.name}}" width="500px" title="{{country.name}}">
-
+      <img src="{{country.flag}}" alt="{{country.name}}" width="450px" height="350px" title="{{country.name}}">
     </div>
 
     <div class="country-details">
-      jkdfsd
+      <div class="county">
+        <h2>{{country.name}}</h2>
+        <ul>
+          <li><b>Native Name:</b> {{country.nativeName}}</li>
+          <li><b>Population:</b> {{country.population | number}}</li>
+          <li><b>Region:</b> {{country.region}}</li>
+          <li><b>Sub region:</b> {{country.subregion}}</li>
+          <li><b>Capital:</b> {{country.capital}}</li>
+          <li><b>Border Countries:</b> </li>
+        </ul>
+      </div>
     </div>
 
+    <div class="county-float">
+      <ul>
+        <li><b>Top Level Domain:</b> {{country.topLevelDomain}}</li>
+        <li><b>Currencies:</b> {{country.currencies[0].name}}</li>
+        <li><b>Languages:</b></li>
+      </ul>
+    </div>
   </div>
 
 </div>
