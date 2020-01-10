@@ -24,3 +24,15 @@ header{
     background-color: hsl(209, 23%, 22%);
     color: #ffffff;
 }
+
+@media only screen and  (max-width: 375px){
+    html {
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        width: auto;
+        padding: 0 20px;
+        }
+
+}

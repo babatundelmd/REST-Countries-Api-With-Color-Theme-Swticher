@@ -100,3 +100,60 @@ a{
     color:hsl(200, 15%, 8%) !important;
 
 }
+
+
+@media only screen
+and (max-width: 375px) {
+    html{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .countries-wrapper{
+        padding: 12px;
+    }
+
+    .search-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+    }
+
+    .countries-container{
+        display: flex;
+        flex-direction: column;
+        grid-column-gap: 2%;
+        padding: 0 12px;
+    }
+
+    .countries-container img{
+        width: 100%;
+    }
+
+    .search-input{
+        padding: 0;
+    }
+
+    .search-filter{
+        padding: 0;
+        width: auto;
+    }
+
+.country{
+    cursor: pointer;
+}
+.country:hover{
+    box-shadow: 0 10px 20px rgba(175, 175, 175, 0.424), 0 6px 6px rgba(230, 230, 230, 0.459);
+}
+
+.country ul li{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+}
