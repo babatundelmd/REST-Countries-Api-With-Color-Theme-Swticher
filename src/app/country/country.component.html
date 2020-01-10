@@ -11,14 +11,14 @@
 
     <div class="country-details">
       <div class="county">
-        <h2>{{country.name}}</h2>
+        <h1>{{country.name}}</h1>
         <ul>
           <li><b>Native Name:</b> {{country.nativeName}}</li>
           <li><b>Population:</b> {{country.population | number}}</li>
           <li><b>Region:</b> {{country.region}}</li>
           <li><b>Sub region:</b> {{country.subregion}}</li>
           <li><b>Capital:</b> {{country.capital}}</li>
-          <li><b>Border Countries:</b> </li>
+          <li><b>Border Countries:</b> <span *ngFor="let border of country.borders"> {{border}},</span></li>
         </ul>
       </div>
     </div>
@@ -27,7 +27,9 @@
       <ul>
         <li><b>Top Level Domain:</b> {{country.topLevelDomain}}</li>
         <li><b>Currencies:</b> {{country.currencies[0].name}}</li>
-        <li><b>Languages:</b> {{country.languages.name}}</li>
+        <li><b>Languages:</b><span *ngFor="let item of country.languages"> {{item.name}}, </span></li>
+        <li><b>Demonym:</b> {{country.demonym}}</li>
+
       </ul>
     </div>
   </div>
