@@ -65,3 +65,33 @@
 .county-float {
     margin-top: 80px;
 }
+
+@media only screen and (max-width: 375px) {
+    .country-wrapper{
+        padding: 16px;
+    }
+
+    .country-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .country-container img{
+        width: 100%;
+        height: 250px;
+    }
+
+
+.county-float{
+    margin-top: 10px;
+    padding: 0 16px;
+}
+
+.county ul li:last-child{
+    padding-top: 10px;
+}
+
+.country-details{
+    padding: 0 16px;
+}
+}
