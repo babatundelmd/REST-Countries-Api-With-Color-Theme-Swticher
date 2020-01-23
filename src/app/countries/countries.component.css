@@ -1,18 +1,19 @@
 .countries-wrapper{
-    padding: 50px 150px;
+    /* padding: 50px 150px; */
 }
 
 .search-container{
     display: grid;
     grid-template-columns: auto auto;
+    padding: 0 150px;
 
 }
 
-.search-input{
+/* .search-input{
     padding: 18px;
     border-radius: 12px;
 
-}
+} */
 
 .search-group{
     display: flex;
@@ -30,7 +31,6 @@
     margin-left: 12px;
     height: 20px;
     padding: 12px;
-    outline: none;
 }
 
 .search-group i{
@@ -58,9 +58,11 @@
 
 .countries-container{
     display: grid;
-    grid-template-columns: repeat(4, 240px);
+    grid-template-columns: repeat(4, 300px);
     margin-top: 50px;
-    grid-column-gap: 7%;
+    grid-column-gap: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
 

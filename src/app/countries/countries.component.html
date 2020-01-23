@@ -22,9 +22,9 @@
 
 
   <div class="countries-container">
-    <div class="country" *ngFor="let country of AllCountries " title="{{country.name}}" [hidden]="hide">
+    <div class="country" *ngFor="let country of AllCountries " title="{{country.name}}">
       <a routerLink="country/{{country.name}}" routerLinkActive="active">
-        <img src="{{country.flag}}" alt="{{country.name}}" width="240px" height="145px">
+        <img src="{{country.flag}}" alt="{{country.name}}" width="300px" height="145px">
         <div class="country-details">
           <h3>{{country.name}}</h3>
           <ul>
