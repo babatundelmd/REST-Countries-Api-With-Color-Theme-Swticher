@@ -2,9 +2,9 @@
   <div class="search-container">
     <div class="search-input">
       <div class="search-group">
-        <i class="fa fa-search"></i><input type="text" placeholder="Search for a country..." (keyup)="onKey($event)">
+        <i class="fa fa-search"></i><input type="text" placeholder="Search for a country..." (keyup)="onKey()"
+          [(ngModel)]="search" id="search" name="search">
       </div>
-      <p>{{getCountry}}</p>
     </div>
     <div class="search-filter">
       <div class="search-filter-item">

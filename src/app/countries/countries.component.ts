@@ -10,6 +10,7 @@ import { CountryModel } from '../models/countries.models';
 export class CountriesComponent implements OnInit {
   values: CountryModel[] = [];
   getCountry = '';
+  search: string = '';
   hide: boolean = false;
   public AllCountries: CountryModel[] = [];
 
@@ -31,13 +32,8 @@ export class CountriesComponent implements OnInit {
   }
 
 
-  onKey (event: any) {
-    this.hide = !this.hide;
-    this.countries.getCountry(event.target.value)
-      .subscribe(res => {
-        this.values = res;
-        this.getCountry = this.values[ 0 ].name
-        console.log(this.values[ 0 ].name)
-      })
+  onKey () {
+    const searching = this.AllCountries.filter(res => !this.search || res.name.toLocaleLowerCase().includes(this.search.toLowerCase()));
+    this.search.length > 2 ? (this.AllCountries = searching) : this.getCountries();
   }
 }
